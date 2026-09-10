@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熏衣草的爱恋-浪漫薰衣草花语与爱情故事分享</title>
+    <meta name="description" content="探索熏衣草的爱恋，了解薰衣草的花语、浪漫传说、紫色花海的旅行灵感，以及如何用薰衣草表达深情爱意。">
+    <meta name="keywords" content="熏衣草的爱恋,薰衣草花语,薰衣草爱情,普罗旺斯,紫色花海,浪漫爱情">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #3a3a3a;
+            background: #fdfcf8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 页眉 */
+        .site-header {
+            background: linear-gradient(135deg, #6b8e6b, #4a7c59);
+            padding: 18px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f9f3e7;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        .logo span {
+            font-weight: 300;
+            font-size: 1rem;
+            color: #d9e6d5;
+            display: block;
+            letter-spacing: 1px;
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        .main-nav a {
+            color: #f0efe4;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .main-nav a:hover {
+            border-bottom-color: #f2d57e;
+        }
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #f9f3e7;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        /* 首屏主视觉 */
+        .hero {
+            background: linear-gradient(135deg, #c9b8a8 0%, #b8a391 40%, #9c8b7d 100%);
+            padding: 80px 0 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(210, 180, 140, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            color: #4a2c1a;
+            font-weight: 700;
+            letter-spacing: 6px;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4);
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #5c3e2b;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+        .hero-btn {
+            display: inline-block;
+            background: #4a2c1a;
+            color: #f9efe2;
+            padding: 12px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+        }
+        .hero-btn:hover {
+            background: #2f1d10;
+            transform: translateY(-2px);
+        }
+        /* 章节通用 */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #4a2c1a;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #7a6a58;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+        /* 花语卡片 */
+        .meaning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .meaning-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #7b9f7a;
+            transition: transform 0.2s;
+        }
+        .meaning-card:hover {
+            transform: translateY(-6px);
+        }
+        .meaning-card .icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        .meaning-card h3 {
+            font-size: 1.3rem;
+            color: #4a2c1a;
+            margin-bottom: 10px;
+        }
+        .meaning-card p {
+            color: #6b5b4e;
+            font-size: 0.95rem;
+        }
+        /* 爱情故事区 */
+        .story-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .story-text h3 {
+            font-size: 1.8rem;
+            color: #4a2c1a;
+            margin-bottom: 20px;
+            border-left: 5px solid #7b9f7a;
+            padding-left: 15px;
+        }
+        .story-text p {
+            margin-bottom: 15px;
+            color: #5a4a3c;
+        }
+        .story-quote {
+            background: #f2ede4;
+            padding: 25px;
+            border-radius: 12px;
+            font-style: italic;
+            font-size: 1rem;
+            color: #6b4f36;
+            border-left: 4px solid #b5947e;
+        }
+        .story-image {
+            background: #d9cbb8;
+            border-radius: 20px;
+            padding: 50px 20px;
+            text-align: center;
+            color: #4f3a24;
+            font-size: 1.2rem;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .story-image .flower {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        /* 旅行灵感 */
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .travel-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+        }
+        .travel-card .place-img {
+            background: linear-gradient(145deg, #b9a390, #8f7b6d);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #f5e9d8;
+        }
+        .travel-card .info {
+            padding: 20px;
+        }
+        .travel-card h3 {
+            color: #4a2c1a;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        .travel-card p {
+            font-size: 0.9rem;
+            color: #6b5b4e;
+        }
+        /* 表达方式 */
+        .expression-list {
+            background: #f2ede4;
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .expression-list li {
+            margin-bottom: 15px;
+            list-style: none;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+            color: #4f3a24;
+        }
+        .expression-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #7b9f7a;
+            font-size: 1.2rem;
+        }
+        /* 常见问题 */
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            border-left: 4px solid #b5947e;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            color: #4a2c1a;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: #6b5b4e;
+            font-size: 0.95rem;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #3b2e22;
+            color: #d6c8b8;
+            padding: 35px 0 20px;
+            margin-top: 20px;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-brand p {
+            max-width: 350px;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+        .footer-links a {
+            color: #cbb8a5;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            color: #f2d57e;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 25px;
+            border-top: 1px solid #5a4635;
+            padding-top: 18px;
+            font-size: 0.8rem;
+            color: #a28d78;
+        }
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .meaning-grid, .travel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .story-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+                width: 100%;
+                order: 3;
+            }
+            .main-nav.open {
+                display: block;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 0;
+                text-align: center;
+            }
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+                letter-spacing: 3px;
+            }
+            .meaning-grid, .travel-grid {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .expression-list {
+                padding: 25px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="#">熏衣草的爱恋</a>
+            <span>紫色花语 · 深情告白</span>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="#meaning">花语含义</a></li>
+                <li><a href="#story">爱情传说</a></li>
+                <li><a href="#travel">花海之旅</a></li>
+                <li><a href="#express">表达心意</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-nav-toggle" id="navToggle" aria-label="菜单">☰</button>
+    </div>
+</header>
+
+<main>
+    <!-- 首屏主视觉 -->
+    <section class="hero">
+        <div class="container">
+            <h1>熏衣草的爱恋</h1>
+            <p>在紫色花海中，聆听心动的回响。薰衣草不只是一株植物，它是等待、是守候、是深藏在心底最温柔的情话。</p>
+            <a href="#story" class="hero-btn">阅读浪漫传说</a>
+        </div>
+    </section>
+
+    <!-- 花语含义 -->
+    <section class="section" id="meaning">
+        <div class="container">
+            <h2 class="section-title">薰衣草的花语与象征</h2>
+            <p class="section-sub">每一朵紫色小花，都在诉说着不同的爱之密语</p>
+            <div class="meaning-grid">
+                <div class="meaning-card">
+                    <div class="icon">💜</div>
+                    <h3>等待爱情</h3>
+                    <p>薰衣草最广为人知的花语是“等待爱情”。它象征着一种安静而执着的守候，就像在漫山遍野的紫色中，静静等待那个人的到来。</p>
+                </div>
+                <div class="meaning-card">
+                    <div class="icon">🤲</div>
+                    <h3>纯洁与承诺</h3>
+                    <p>淡雅的香气和纯净的色彩，让薰衣草也代表着纯洁无瑕的心意。它是一份不掺杂质的情感承诺，送给心爱的人再合适不过。</p>
+                </div>
+                <div class="meaning-card">
+                    <div class="icon">🌿</div>
+                    <h3>宁静的深情</h3>
+                    <p>不同于玫瑰的热烈，薰衣草的爱是沉静而安心的。它象征着细水长流的陪伴，在平凡日子里散发出持久的温暖。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 爱情传说 -->
+    <section class="section" id="story" style="background: #f7f2ea;">
+        <div class="container">
+            <h2 class="section-title">属于薰衣草的浪漫传说</h2>
+            <p class="section-sub">一个关于等待与重逢的故事</p>
+            <div class="story-row">
+                <div class="story-text">
+                    <h3>山谷中的紫色约定</h3>
+                    <p>相传在很久以前，一位少女在薰衣草花田里救起了一位受伤的少年。在照料他的日子里，两人暗生情愫。少年伤愈后不得不离开，临行前，他折下一枝薰衣草送给少女，说：“当这片花田再次盛开时，我会回来娶你。”</p>
+                    <p>少女将薰衣草插在窗台，日复一日地守望。花开花落，年复一年，少年始终没有回来。少女没有放弃，她把自己的心事都倾诉给了薰衣草，直到青丝变成白发。</p>
+                    <div class="story-quote">有人说，薰衣草的香气之所以如此悠远，是因为它承载了太多未说出口的思念。而那片紫色的花海，也成了世间最温柔的等待之地。</div>
+                </div>
+                <div class="story-image">
+                    <div class="flower">💐</div>
+                    <p>紫海无涯<br>爱有归期</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 花海旅行灵感 -->
+    <section class="section" id="travel">
+        <div class="container">
+            <h2 class="section-title">寻找那片紫色花海</h2>
+            <p class="section-sub">世界各地的薰衣草胜地，是情侣与摄影爱好者的梦想之地</p>
+            <div class="travel-grid">
+                <div class="travel-card">
+                    <div class="place-img">🏞️</div>
+                    <div class="info">
+                        <h3>法国 · 普罗旺斯</h3>
+                        <p>提到薰衣草，普罗旺斯是绕不开的名字。每年夏季，瓦朗索勒高原的薰衣草田绵延起伏，成为无数人心中的浪漫地标。</p>
+                    </div>
+                </div>
+                <div class="travel-card">
+                    <div class="place-img">⛰️</div>
+                    <div class="info">
+                        <h3>日本 · 北海道</h3>
+                        <p>富良野的薰衣草田与远山相映，尤其在清晨薄雾中，紫色花海与天空交织，呈现出独特的温柔气质。</p>
+                    </div>
+                </div>
+                <div class="travel-card">
+                    <div class="place-img">🏡</div>
+                    <div class="info">
+                        <h3>中国 · 新疆伊犁</h3>
+                        <p>霍城薰衣草基地被誉为“东方的普罗旺斯”，六月至七月是盛花期，是近距离感受紫色浪漫的好去处。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 如何表达爱意 -->
+    <section class="section" id="express" style="background: #f7f2ea;">
+        <div class="container">
+            <h2 class="section-title">用薰衣草表达你的心意</h2>
+            <p class="section-sub">不只送花，更送一份独特的深情</p>
+            <ul class="expression-list">
+                <li><strong>一束新鲜薰衣草</strong> —— 简单直接，花语即心意，适合告白或纪念日。</li>
+                <li><strong>薰衣草干花花束</strong> —— 花朵虽干，香气长存，寓意“爱意不随时间褪色”。</li>
+                <li><strong>薰衣草香包</strong> —— 放在枕边或衣橱，用温柔的香气陪伴对方每一天。</li>
+                <li><strong>手写信 + 薰衣草书签</strong> —— 将说不出口的话写在纸上，夹一朵紫色小花，是很有质感的表达。</li>
+                <li><strong>薰衣草主题约会</strong> —— 带对方去看一片花海，或一起制作薰衣草小物，共同创造专属回忆。</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">关于薰衣草与爱情，你可能想问</h2>
+            <div class="faq-item">
+                <h3>Q：薰衣草适合送给什么样的人？</h3>
+                <p>薰衣草的花语是等待与纯洁的爱，适合送给正在相恋的伴侣，也适合送给那个你愿意默默守候的人。它不像玫瑰那样热烈，却更显真挚与持久。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q：薰衣草有不同颜色的含义吗？</h3>
+                <p>通常大家见到的薰衣草是紫色，这也是最经典的。部分品种会呈现蓝紫色或粉紫色，但核心花语基本一致。不同颜色更多是视觉效果上的差异。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q：为什么薰衣草代表“等待爱情”？</h3>
+                <p>这个寓意源自欧洲的民间传说和文学作品的长期沉淀。薰衣草的花期较长，且花朵干燥后依然保留香气，这种“持久”的特性被引申为对爱情的耐心与忠贞。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q：除了送花，还有什么薰衣草礼物值得推荐？</h3>
+                <p>薰衣草精油、护手霜、香薰蜡烛等都很受欢迎。这些礼物不仅实用，而且每次使用都会让人联想到送礼物的人，是一种非常温暖的陪伴。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <h3 style="color: #e4cfbb; font-size: 1.2rem;">熏衣草的爱恋</h3>
+            <p>愿每一份深情都不被辜负，愿每一片紫色花海都能见证真爱。这里是关于薰衣草与爱情的一切美好集合。</p>
+        </div>
+        <div class="footer-links">
+            <a href="#meaning">花语</a>
+            <a href="#story">传说</a>
+            <a href="#travel">旅行</a>
+            <a href="#express">礼物</a>
+        </div>
+    </div>
+    <div class="container copyright">
+        <p>&copy; 2025 熏衣草的爱恋 · 用心分享紫色浪漫</p>
+    </div>
+</footer>
+
+<script>
+    // 移动端菜单切换
+    (function() {
+        var navToggle = document.getElementById('navToggle');
+        var mainNav = document.getElementById('mainNav');
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('open');
+            });
+        }
+    })();
+</script>
+</body>
+      </html>
